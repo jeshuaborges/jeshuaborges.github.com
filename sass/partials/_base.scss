@@ -1,0 +1,31 @@
+
+$blueprint_grid_columns: 12;
+$blueprint_grid_width: 48px;
+$blueprint-grid-margin: 24px;
+$blueprint-font-family: Verdana, "Lucida Grande";
+
+@import "compass/reset";
+
+@import "blueprint";
+@import "blueprint/colors";
+@import "blueprint/scaffolding";
+
+@include global-reset;
+@include blueprint-scaffolding;
+@include blueprint-typography;
+
+body {
+  background-color: #B7DBE4;
+}
+
+.two-col {
+  @include container;
+
+  #header, #footer {
+    @include column(12);
+  }
+  #sidebar {
+    @include column(3); }
+  #content {
+    @include column(5, true); } 
+}
